@@ -1,12 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemValue : MonoBehaviour
 {
-    //value of a coin
+    // Set the Items Value
     public int value = 0;
 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -17,4 +18,5 @@ public class ItemValue : MonoBehaviour
     {
         
     }
+
 }
