@@ -29354,29 +29354,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2255601347013702047, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255601347013702047, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255601347013702047, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5296944262663640658, guid: 60509e946a860c447b74afc743794fc2, type: 3}
-    - target: {fileID: 4020275303023788046, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
-      propertyPath: m_Size.y
-      value: 1.97
-      objectReference: {fileID: 0}
     - target: {fileID: 6221255184412298693, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124617213973140007, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9124617213973140007, guid: 95589179e55721f43992c69aa0d83aa2, type: 3}
       propertyPath: m_LocalPosition.x
