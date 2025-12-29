@@ -9,13 +9,15 @@ public class PlayerInventory : MonoBehaviour
     public int coins = 0;
     
     // Reference the Collectables Audio Source 
-
+private AudioSource audioSource;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject childCollectableAudio = new GameObject("childCollectableAudio");
+        childCollectableAudio.transform.SetParent(transform);
+        audioSource = childCollectableAudio.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,10 +44,10 @@ public class PlayerInventory : MonoBehaviour
             coins += collectableValue;
 
             // Load the Audio file to the Audio Source
-            
+            audioSource.clip = collectable.GetComponent<ItemAudio>().audioFile;
 
             // Play the Audio file
-            
+            audioSource.Play();
 
             // Destory the collectable
             Destroy(collectable);

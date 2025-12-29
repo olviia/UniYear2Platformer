@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3787463704041758160}
   - component: {fileID: 2792422295857812623}
-  - component: {fileID: 3821378958041628166}
   - component: {fileID: 5886336537548130673}
   - component: {fileID: 5280424410267485044}
+  - component: {fileID: 5970843085777893712}
   m_Layer: 0
   m_Name: Coin_Base
   m_TagString: Collectables
@@ -93,19 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3821378958041628166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2823995777026957319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9913899e32693824ab5aa4e22c71f322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemValue
-  value: 0
 --- !u!70 &5886336537548130673
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,4 +142,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff636b2e49d5b84a93dda6384fa93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemAudio
-  audioFile: {fileID: 0}
+  audioFile: {fileID: 8300000, guid: 7bab222909a88d043ba69c4d3763f663, type: 3}
+--- !u!114 &5970843085777893712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2823995777026957319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523654d8043d63440be741fee48cec7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemValue
+  value: 0

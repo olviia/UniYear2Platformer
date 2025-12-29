@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 6484772248049813712}
   - component: {fileID: 2926028979383628235}
   m_Layer: 0
-  m_Name: Enemy - Boar
+  m_Name: EnemyMain
   m_TagString: Mobs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

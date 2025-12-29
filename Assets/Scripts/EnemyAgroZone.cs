@@ -8,7 +8,7 @@ public class EnemyAgroZone : MonoBehaviour
     public GameObject target;
     public GameObject enemy;
     public float movementSpeed;
-    public EnemyAudioController audioController;
+    private EnemyAudioController audioController;
 
     private Rigidbody2D enemyRigidBody;
     private Vector2 calculatedDirection;
