@@ -8,6 +8,7 @@ public class EnemyAgroZone : MonoBehaviour
     public GameObject target;
     public GameObject enemy;
     public float movementSpeed;
+    public EnemyAudioController audioController;
 
     private Rigidbody2D enemyRigidBody;
     private Vector2 calculatedDirection;
@@ -26,6 +27,7 @@ public class EnemyAgroZone : MonoBehaviour
         enemyAnimator = enemy.GetComponent<Animator>();
 
         spriteRenderer = enemy.GetComponent<SpriteRenderer>();
+        audioController = enemy.GetComponent<EnemyAudioController>();
     }
 
     // Update is called once per frame
@@ -45,8 +47,9 @@ public class EnemyAgroZone : MonoBehaviour
         }
         else {
             enemyAnimator.SetBool("Walking", false);
-        } 
+        }
 
+        audioController.PlayChasingAudio(enemyAnimator.GetBool("Walking"));
 
     }
 
@@ -93,6 +96,19 @@ public class EnemyAgroZone : MonoBehaviour
             // Debug.Log("Enter: " + collision.name);
             targetDetected = true;
 
+            //remove health from player
+            if (Mathf.Abs(calculatedDistance.x) >= 2)
+            {
+                enemyAnimator.SetTrigger("Attack");
+                
+                ItemLife itemLife = collision.GetComponent<ItemLife>();
+                itemLife.Hit(5);
+            }
+            
+            
+            
+            //TODO
+            //play attack and sound
         }
 
     }

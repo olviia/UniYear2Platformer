@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
     GroundCheck groundCheck;
+    PlayerAudioController playerAudio;
+
+    public TextMeshProUGUI guiHealth;
+    private ItemLife itemLife;
 
 
     public Vector2 movementDirection;
@@ -24,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         groundCheck = gameObject.GetComponent<GroundCheck>();
+        itemLife = gameObject.GetComponent<ItemLife>();
+        playerAudio = gameObject.GetComponent<PlayerAudioController>();
 
     }
 
@@ -31,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //UI
+        guiHealth.text = "HP: " + itemLife.health.ToString();
 
         // Is the Player Moving?
         if (movementDirection != Vector2.zero)
@@ -47,13 +56,14 @@ public class PlayerMovement : MonoBehaviour
             else {
                 spriteRenderer.flipX = false;
             }
-
         }
         // If the player is not moving - they're standing still
         else {
             // Disable the Run Animation
             animator.SetBool("Run", false);
         }
+
+        playerAudio.PlayWalkingAudio(animator.GetBool("Run"));
     }
 
     void FixedUpdate()
@@ -72,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
     void OnFire() {
         // Trigger the Attack Animation
         animator.SetTrigger("Attack");
+        playerAudio.PlayAttackAudio();
 
     }
 
@@ -83,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Player has Jumped!");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
             animator.SetTrigger("Jump");
+            playerAudio.PlayJumpAudio();
         }
     }
 }
