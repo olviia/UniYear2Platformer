@@ -91,7 +91,6 @@ public class PlayerMovement : MonoBehaviour
         // Trigger the Jump Animation
         if (groundCheck.isGrounded)
         {
-            Debug.Log("Player has Jumped!");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
             animator.SetTrigger("Jump");
             playerAudio.PlayJumpAudio();
