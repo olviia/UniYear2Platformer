@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBoarManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
     Animator animator;
     ItemLife itemLife;
