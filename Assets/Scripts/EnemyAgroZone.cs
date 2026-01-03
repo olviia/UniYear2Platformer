@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAgroZone : MonoBehaviour
 {
 
-    public GameObject target;
+    private GameObject target; 
     public GameObject enemy;
     public float movementSpeed;
     private EnemyAudioController audioController;
@@ -90,8 +90,10 @@ public class EnemyAgroZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Player Radius Detection
-        if (collision.name.Equals(target.name))
+        //if (collision.name.Equals(target.name))
+            if (collision.CompareTag("Player"))
         {
+            target =  collision.gameObject;
 
             // Debug.Log("Enter: " + collision.name);
             targetDetected = true;
@@ -108,7 +110,7 @@ public class EnemyAgroZone : MonoBehaviour
             
             
             //TODO
-            //play attack and sound
+            //play attack animation and sound
         }
 
     }
@@ -116,7 +118,7 @@ public class EnemyAgroZone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Player Radius Detection
-        if (collision.name.Equals(target.name))
+        if (collision.CompareTag("Player"))
         {
 
             //Debug.Log("Exit: " + collision.name);

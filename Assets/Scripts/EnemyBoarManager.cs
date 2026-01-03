@@ -44,6 +44,10 @@ public class EnemyBoarManager : MonoBehaviour
         yield return new WaitForSeconds(timer);
         // Destory myself
         Destroy(gameObject);
-    
+        
+        //+1 enemy died
+        PlayerInventory.Instance.enemiesDefeated++;
+        LevelObjective.Instance.UpdateObjectiveState();
+
     }
 }

@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-
+    public static PlayerInventory Instance{get; private set;}
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        Instance = this;
+    }
+    
+    
     // Coins Value
     public int coins = 0;
+    public int enemiesDefeated = 0;
+    public int keys = 0;
     
     // Reference the Collectables Audio Source 
 private AudioSource audioSource;
@@ -56,6 +68,7 @@ private AudioSource audioSource;
             Debug.Log("Player now has: " + coins + " Coins in their Inventory.");
 
         }
+        LevelObjective.Instance.UpdateObjectiveState();
     }
 
     private void OnCollisionExit2D(Collision2D collision)
