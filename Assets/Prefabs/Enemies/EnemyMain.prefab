@@ -691,10 +691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc80495fa7ed344b912d4913946267a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   enemy: {fileID: 6168901220376808550}
   movementSpeed: 5
-  audioController: {fileID: 0}
+  hitPower: 50
 --- !u!58 &3093180209015686487
 CircleCollider2D:
   m_ObjectHideFlags: 0

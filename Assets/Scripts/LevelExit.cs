@@ -4,7 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
-    public int nextSceneId;
+    public GameObject nextScenePopup;
+
+    private void Start()
+    {
+        nextScenePopup.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -14,13 +20,8 @@ public class LevelExit : MonoBehaviour
                 Debug.Log("Level exit");
                 //todo
                 //play animation
-                //in the last frame of animation trigger NextScene
+                nextScenePopup.SetActive(true);
             }
         }
-    }
-
-    public void NextScene()
-    {
-        SceneManager.LoadScene(nextSceneId);
     }
 }

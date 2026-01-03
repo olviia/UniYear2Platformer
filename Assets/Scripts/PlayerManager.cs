@@ -14,7 +14,14 @@ public class PlayerManager : MonoBehaviour
     PlayerAudioController playerAudio;
 
     public TextMeshProUGUI guiHealth;
+    public GameObject restartPopup;
+    // Determines how long we wait before destorying the game object
+    public int destroyTimer = 1;
+    
     private ItemLife itemLife;
+    
+    
+    private bool deathTriggered = false;
 
 
     public Vector2 movementDirection;
@@ -31,6 +38,8 @@ public class PlayerManager : MonoBehaviour
         groundCheck = gameObject.GetComponent<GroundCheck>();
         itemLife = gameObject.GetComponent<ItemLife>();
         playerAudio = gameObject.GetComponent<PlayerAudioController>();
+        
+        restartPopup.SetActive(false);
 
     }
 
@@ -64,6 +73,35 @@ public class PlayerManager : MonoBehaviour
         }
 
         playerAudio.PlayWalkingAudio(animator.GetBool("Run"));
+        
+        //death trigger
+        if (itemLife.health <= 0 && !deathTriggered) {
+
+            // Call the Death Animation
+            animator.SetTrigger("Death");
+
+            // Update the Death Trigger Boolean to stop looping
+            deathTriggered = true;
+
+            //play audio
+            playerAudio.PlayDeathAudio();
+            
+            // Start a Timer to Destory the Game Object
+            StartCoroutine(DeactivateOnDeath(destroyTimer));
+            
+        }
+    }
+    
+    // Destory Timer - invoked with Couroutine in Update()
+    IEnumerator DeactivateOnDeath(int timer) {
+        
+        // Wait before destorying
+        yield return new WaitForSeconds(timer);
+        
+        //show popup
+        restartPopup.SetActive(true);
+        
+       gameObject.active = false;
     }
 
     void FixedUpdate()

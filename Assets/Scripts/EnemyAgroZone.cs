@@ -6,8 +6,11 @@ public class EnemyAgroZone : MonoBehaviour
 {
 
     private GameObject target; 
+    
     public GameObject enemy;
     public float movementSpeed;
+    public int hitPower;
+    
     private EnemyAudioController audioController;
 
     private Rigidbody2D enemyRigidBody;
@@ -102,15 +105,12 @@ public class EnemyAgroZone : MonoBehaviour
             if (Mathf.Abs(calculatedDistance.x) >= 2)
             {
                 enemyAnimator.SetTrigger("Attack");
+                audioController.PlayAttackAudio();
                 
                 ItemLife itemLife = collision.GetComponent<ItemLife>();
-                itemLife.Hit(5);
+                itemLife.Hit(hitPower);
             }
             
-            
-            
-            //TODO
-            //play attack animation and sound
         }
 
     }
