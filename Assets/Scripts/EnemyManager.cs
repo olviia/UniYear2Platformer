@@ -40,14 +40,14 @@ public class EnemyManager : MonoBehaviour
 
     // Destory Timer - invoked with Couroutine in Update()
     IEnumerator DestoryGameObject(int timer) {
+        //+1 enemy died
+        PlayerInventory.Instance.enemiesDefeated++;
+        LevelObjective.Instance.UpdateObjectiveState();
         // Wait before destorying
         yield return new WaitForSeconds(timer);
         // Destory myself
         Destroy(gameObject);
         
-        //+1 enemy died
-        PlayerInventory.Instance.enemiesDefeated++;
-        LevelObjective.Instance.UpdateObjectiveState();
 
     }
 }
