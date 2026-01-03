@@ -4,7 +4,7 @@ using UnityEngine;
 
 //hardcoded goals
 public enum objectiveNames
-{Coin, Enemy, Key }
+{Coins, Enemies, Keys }
 
 public class LevelObjective : MonoBehaviour
 {
@@ -30,13 +30,13 @@ public class LevelObjective : MonoBehaviour
     {
         switch (objectiveName)
         {
-            case objectiveNames.Coin:
+            case objectiveNames.Coins:
                 objectiveProgress = PlayerInventory.Instance.coins; 
                 break;
-            case objectiveNames.Key:
+            case objectiveNames.Keys:
                 objectiveProgress = PlayerInventory.Instance.keys;
                 break;
-            case objectiveNames.Enemy:
+            case objectiveNames.Enemies:
                 //I put enemies into inventory because i didn't want to create a separate script for it
                 objectiveProgress = PlayerInventory.Instance.enemiesDefeated;
                 break;

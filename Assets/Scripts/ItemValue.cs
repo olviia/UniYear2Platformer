@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ItemType
+{Coin, Key}
+
 public class ItemValue : MonoBehaviour
 {
     // Set the Items Value
     public int value = 0;
+    public ItemType type;
 
     // Start is called before the first frame update
     void Start()

@@ -45,15 +45,21 @@ private AudioSource audioSource;
         {
             // Create a reference to the collectable
             GameObject collectable = collision.gameObject;
-
-            // Report the Collectable name 
-            Debug.Log("Collided with a Collectable: " + collectable.name);
             
             // Get the Item Value Scripts - Value Variable
             int collectableValue = collectable.GetComponent<ItemValue>().value;
+            ItemType collectableType = collectable.GetComponent<ItemValue>().type;
+
+            switch (collectableType)
+            {
+                case ItemType.Key:
+                    keys++;
+                    break;
+                case ItemType.Coin:
+                    coins += collectableValue;
+                    break;
+            }
             
-            // Update the Coins total
-            coins += collectableValue;
 
             // Load the Audio file to the Audio Source
             audioSource.clip = collectable.GetComponent<ItemAudio>().audioFile;
