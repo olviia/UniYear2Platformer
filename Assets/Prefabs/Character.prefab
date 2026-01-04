@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 70b29ce7a6eea91448e1ef0b5e73c55a, type: 3}
+  m_Resource: {fileID: 8300000, guid: ed0eb5a1a8538934889155722600dbac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -172,7 +172,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3c5961b59c3a9004697ed7b1905335ce, type: 3}
+  m_Resource: {fileID: 8300000, guid: bf1b63b735d3efb47be6a64b43753f88, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -645,7 +645,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3c5961b59c3a9004697ed7b1905335ce, type: 3}
+  m_Resource: {fileID: 8300000, guid: a8d265d874612624bbb48356c63fa336, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -774,7 +774,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 51ba88d41a4053b4ba2d30a0fb637824, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4c2fcd3c53033e241815249ca7f7d191, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 3216241351256213232}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1090,10 +1090,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb2868492503c84caaeebc7a2e410f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   guiHealth: {fileID: 0}
+  restartPopup: {fileID: 0}
+  destroyTimer: 2
+  deathTriggered: 0
   movementDirection: {x: 0, y: 0}
   movementSpeed: 9
   jumpImpulse: 7
+  canMove: 1
 --- !u!114 &197590775824747806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,6 +1169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   coins: 0
+  enemiesDefeated: 0
+  keys: 0
 --- !u!1 &6720195176070776229
 GameObject:
   m_ObjectHideFlags: 0

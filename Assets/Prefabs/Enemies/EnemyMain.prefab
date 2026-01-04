@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3c5961b59c3a9004697ed7b1905335ce, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5e9e0ef885c9d264686f8c33d5c67523, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -172,7 +172,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3c5961b59c3a9004697ed7b1905335ce, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3a446ae484923404bbb74822c58fd632, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -526,7 +526,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3c5961b59c3a9004697ed7b1905335ce, type: 3}
+  m_Resource: {fileID: 8300000, guid: fd6b55651c77d8d449cc2e43adb6a4ac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -694,6 +694,7 @@ MonoBehaviour:
   enemy: {fileID: 6168901220376808550}
   movementSpeed: 5
   hitPower: 50
+  timeBetweenAttacks: 5
 --- !u!58 &3093180209015686487
 CircleCollider2D:
   m_ObjectHideFlags: 0

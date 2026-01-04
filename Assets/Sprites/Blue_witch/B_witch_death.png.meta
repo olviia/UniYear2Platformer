@@ -162,9 +162,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 432
+        y: 435
         width: 32
-        height: 48
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,9 +184,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 385
         width: 32
-        height: 48
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,9 +206,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 336
+        y: 339
         width: 32
-        height: 48
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,9 +228,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 288
+        y: 290
         width: 32
-        height: 48
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,35 +246,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_death_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 240
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9632db83b89302d0800000000000000
-      internalID: -3313637003902175589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: B_witch_death_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 243
         width: 32
-        height: 48
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,55 +268,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_death_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 144
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 10334d34097427b10800000000000000
-      internalID: 1977721871307911937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_death_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b273fe733fa014a0800000000000000
-      internalID: -6624602416153922895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: B_witch_death_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 195
         width: 32
         height: 48
       alignment: 0
@@ -356,23 +290,133 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_death_9
+      name: B_witch_death_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 162
         width: 32
-        height: 48
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2ab0d23dad9421af0800000000000000
-      internalID: -427197810452132958
+      spriteID: ef4b4e3fa94b48e4b9d122fbf1209b22
+      internalID: 833554292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch_death_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 32
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4999991, y: 0.6427943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de63aa5ae7476a543a14e29c6ed79496
+      internalID: -1446381458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch_death_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4999991, y: 0.67849183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40984a3de064a046bf5792500495bcc
+      internalID: -568481583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch_death_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4999991, y: 0.730312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef376adb3b0695049ab29d0cf4659070
+      internalID: -913992617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch_death_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 32
+        height: 35
+      alignment: 9
+      pivot: {x: 0.4999991, y: 0.7447894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b7887b451be09448a46252448fd046
+      internalID: -1295203678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch_death_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4999991, y: 0.7729875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c35ae17e5e3a2842bb13b5ea0c1e3ec
+      internalID: 1744153390
       vertices: []
       indices: 
       edges: []
@@ -391,10 +435,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":10.0},"gridSpriteSize":{"x":32.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":11.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       B_witch_death_0: 4545668489846933406
       B_witch_death_1: -1838697749395032867
+      B_witch_death_10: 833554292
+      B_witch_death_11: -1446381458
+      B_witch_death_12: -568481583
+      B_witch_death_13: -913992617
+      B_witch_death_14: -1295203678
+      B_witch_death_15: 1744153390
       B_witch_death_2: -6064796078805686643
       B_witch_death_3: -5773514330907110222
       B_witch_death_4: -3313637003902175589

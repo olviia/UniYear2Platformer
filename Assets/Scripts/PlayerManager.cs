@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
 {
 
     Rigidbody2D rb;
-    Animator animator;
+    public Animator animator;
     SpriteRenderer spriteRenderer;
     GroundCheck groundCheck;
     PlayerAudioController playerAudio;
@@ -21,12 +21,13 @@ public class PlayerManager : MonoBehaviour
     private ItemLife itemLife;
     
     
-    private bool deathTriggered = false;
+    public bool deathTriggered = false;
 
 
     public Vector2 movementDirection;
     public int movementSpeed = 5;
     public int jumpImpulse = 5;
+    [HideInInspector] public bool canMove = true;
 
 
     // Start is called before the first frame update
@@ -86,6 +87,8 @@ public class PlayerManager : MonoBehaviour
             //play audio
             playerAudio.PlayDeathAudio();
             
+            stopMovement();
+            
             // Start a Timer to Destory the Game Object
             StartCoroutine(DeactivateOnDeath(destroyTimer));
             
@@ -100,8 +103,8 @@ public class PlayerManager : MonoBehaviour
         
         //show popup
         restartPopup.SetActive(true);
-        
-       gameObject.active = false;
+
+        canMove = false;
     }
 
     void FixedUpdate()
@@ -133,5 +136,12 @@ public class PlayerManager : MonoBehaviour
             animator.SetTrigger("Jump");
             playerAudio.PlayJumpAudio();
         }
+    }
+
+    public void stopMovement()
+    {
+        GetComponent<PlayerInput>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+        GetComponent<Collider2D>().enabled = false;
     }
 }

@@ -10,6 +10,7 @@ public class EnemyAgroZone : MonoBehaviour
     public GameObject enemy;
     public float movementSpeed;
     public int hitPower;
+    public float timeBetweenAttacks = 5f;
     
     private EnemyAudioController audioController;
 
@@ -21,6 +22,8 @@ public class EnemyAgroZone : MonoBehaviour
 
     private Animator enemyAnimator;
     private SpriteRenderer spriteRenderer;
+
+    private float lastAttackTime;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +61,7 @@ public class EnemyAgroZone : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (targetDetected)
+        if (targetDetected && !target.GetComponent<PlayerManager>().deathTriggered)
         {
             // Calculate the Direction to Run
             calculatedDirection = (target.transform.position - enemy.transform.position).normalized;
@@ -81,6 +84,20 @@ public class EnemyAgroZone : MonoBehaviour
             else
             {
                 enemyRigidBody.linearVelocity = new Vector2(0, 0);
+
+                //attack if enemy is ready
+                if (Time.time - lastAttackTime >= timeBetweenAttacks)
+                {
+                    enemyAnimator.SetTrigger("Attack");
+                    audioController.PlayAttackAudio();
+                
+                    ItemLife itemLife = target.GetComponent<ItemLife>();
+                    itemLife.Hit(hitPower);
+        
+                    target.GetComponent<PlayerManager>().animator.SetTrigger("Hit");
+                    
+                    lastAttackTime = Time.time;
+                }
             }
         }
         // Stop moving
@@ -100,20 +117,11 @@ public class EnemyAgroZone : MonoBehaviour
 
             // Debug.Log("Enter: " + collision.name);
             targetDetected = true;
-
-            //remove health from player
-            if (Mathf.Abs(calculatedDistance.x) >= 2)
-            {
-                enemyAnimator.SetTrigger("Attack");
-                audioController.PlayAttackAudio();
-                
-                ItemLife itemLife = collision.GetComponent<ItemLife>();
-                itemLife.Hit(hitPower);
-            }
             
         }
 
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {

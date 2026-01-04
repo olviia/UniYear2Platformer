@@ -7,6 +7,7 @@ public class GoToLevel : MonoBehaviour
 
     public void Go()
     {
+        GetComponent<AudioSource>().Play();
         SceneManager.LoadScene(toSceneId);
     }
 }

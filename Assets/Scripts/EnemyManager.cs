@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     // Determines how long we wait before destorying the game object
     public int destroyTimer = 1;
+    
 
 
     // Start is called before the first frame update

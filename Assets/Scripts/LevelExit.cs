@@ -17,10 +17,17 @@ public class LevelExit : MonoBehaviour
         {
             if (LevelObjective.Instance.IsComplete())
             {
-                Debug.Log("Level exit");
+                other.gameObject.GetComponent<PlayerManager>().stopMovement();
+                
                 //todo
-                //play animation
+                //play final animation
+                
                 nextScenePopup.SetActive(true);
+            }
+            else
+            {
+                //todo
+                //maybe play some other animation, and turn it off on trigger exit
             }
         }
     }
