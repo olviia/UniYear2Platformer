@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff636b2e49d5b84a93dda6384fa93dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemAudio
-  audioFile: {fileID: 8300000, guid: 7bab222909a88d043ba69c4d3763f663, type: 3}
+  audioFile: {fileID: 8300000, guid: 0e853b9596e1fad438145962f4dd17d9, type: 3}
 --- !u!114 &5970843085777893712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemValue
   value: 0
+  type: 0
